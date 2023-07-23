@@ -20,3 +20,12 @@ class voice-record(commands.Cog):
         self.vc == voice_channel.connect()
       else:
         await self.vc.moveto(voice_channel)
+
+  @commands.command(name="recordingtime", aliases=["rt","rtime"], help="Sets bot's recording time in seconds.")
+  async def recordingtime(self,ctx,*args):
+    """Sets bot's recording time in seconds."""
+    time = " ".join(args)
+    if time.isdigit():
+      self.rt = time
+    else:
+      awat ctx.send("Value is not a positive integer!")
