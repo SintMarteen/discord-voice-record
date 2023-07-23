@@ -11,6 +11,7 @@ class voice-record(commands.Cog):
 
   @commands.command(name="connect", aliases=["c","join","j"], help="Connects to voice channel.")
   async def connect(self,ctx,*args):
+    """Connects to user's voice channel"""
     if voice_channel is None:
       await ctx.send("Primero conecta a un canal, tonto estúpido.")
     else:
