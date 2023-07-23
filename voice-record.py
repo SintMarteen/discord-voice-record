@@ -13,7 +13,7 @@ class voice-record(commands.Cog):
   async def connect(self,ctx,*args):
     """Connects to user's voice channel"""
     if voice_channel is None:
-      await ctx.send("Primero conecta a un canal, tonto estúpido.")
+      await ctx.send("You're not connected to a voice channel!")
     else:
       if self.vc == None or not self.vc.is_connected():
         self.vc == voice_channel.connect()
