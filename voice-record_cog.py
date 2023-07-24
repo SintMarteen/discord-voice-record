@@ -1,3 +1,4 @@
+import sys; sys.path.insert(0, 'discord.py')
 import discord
 from discord.ext import commands
 import os
